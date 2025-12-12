@@ -26,10 +26,10 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "50+", label: "Projects Completed" },
-    { number: "5+", label: "Years Experience" },
-    { number: "20+", label: "Technologies" },
-    { number: "100%", label: "Commitment" },
+    { number: "5+", label: "Apps & Tools Built" },
+    { number: "4+", label: "Years Building Software" },
+    { number: "39.5k+", label: "Community Followers" },
+    { number: "1.7M+", label: "Video Views" },
   ];
 
   return (
@@ -68,24 +68,31 @@ const About = () => {
               Hi, I'm <span className="highlight">Youssef</span>
             </h3>
             <p className="about-description">
-              I'm a passionate full-stack developer with a love for creating
-              elegant solutions to complex problems. With over 5 years of
-              experience in web development, I've had the privilege of working
-              on diverse projects ranging from startups to enterprise
-              applications.
+              I’m a passionate full-stack developer who loves turning ideas into
+              clean, scalable solutions. I’ve worked on a variety of projects
+              across web, cloud, and AI—building products that balance
+              performance, simplicity, and great user experience.
             </p>
             <p className="about-description">
-              My journey in tech started with a curiosity about how websites
-              work, and it quickly evolved into a deep passion for building
-              exceptional digital experiences. I believe in writing clean,
-              maintainable code and creating interfaces that users love to
-              interact with.
+              My journey in tech started with pure curiosity about how things
+              work, and it quickly evolved into a commitment to building
+              meaningful digital experiences. I focus on writing clean,
+              maintainable code and designing systems that are reliable,
+              intuitive, and efficient.
             </p>
             <p className="about-description">
-              When I'm not coding, you'll find me exploring new technologies,
-              contributing to open-source projects, or enjoying a good cup of
-              coffee while reading about the latest trends in software
-              development. I'm always eager to learn and take on new challenges.
+              Beyond development, I’ve built an online Arabic tech community of
+              39,500+ followers with 1.7M+ video views, where I break down
+              complex technical concepts into simple, engaging content. This
+              experience has strengthened my communication skills and my ability
+              to explain intricate ideas clearly—something that translates
+              directly into better collaboration and product design.
+            </p>
+            <p className="about-description">
+              When I’m not coding, you’ll find me learning new tools, exploring
+              cloud architecture, or enjoying a good cup of coffee while
+              catching up on the latest trends in software and AI. I’m
+              constantly improving and always excited to take on new challenges.
             </p>
 
             <div className="about-stats">
