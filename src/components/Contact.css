@@ -60,10 +60,27 @@
 }
 
 .contact-content {
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: 4rem;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.contact-info-centered {
+  max-width: 700px;
+  width: 100%;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .contact-info {
@@ -71,27 +88,29 @@
 }
 
 .contact-info-title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .contact-info-text {
   color: #94a3b8;
   line-height: 1.8;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .contact-details {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .contact-detail {
@@ -145,12 +164,13 @@
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
+  justify-content: center;
 }
 
 .social-link {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.3);
@@ -160,13 +180,15 @@
   color: #6366f1;
   transition: all 0.3s ease;
   text-decoration: none;
+  animation: fadeInUp 0.6s ease-out backwards;
 }
 
 .social-link:hover {
   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   color: white;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
+  border-color: transparent;
 }
 
 .contact-form {
@@ -302,8 +324,16 @@
   }
 
   .contact-content {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+  }
+
+  .contact-info-centered {
+    max-width: 100%;
+  }
+
+  .contact-info-title {
+    font-size: 2rem;
   }
 
   .contact-form {
@@ -312,12 +342,21 @@
 }
 
 @media (max-width: 640px) {
+  .contact-content {
+    min-height: 40vh;
+  }
+
   .contact-form {
     padding: 1.5rem;
   }
 
   .contact-info-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
   }
 
   .footer {

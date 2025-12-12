@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./Contact.css";
 
 const Contact = () => {
+  const form = useRef();
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
+    user_name: "",
+    user_email: "",
     subject: "",
     message: "",
   });
@@ -22,12 +26,40 @@ const Contact = () => {
     e.preventDefault();
     setStatus("sending");
 
-    setTimeout(() => {
-      setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+    emailjs
+      .sendForm(
+        "service_8s9emog",
+        "template_zg89kgx",
+        form.current,
+        "1ahAP2W-e2R8lTz5I"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("Message is sent");
+          setStatus("success");
+          setFormData({ user_name: "", user_email: "", subject: "", message: "" });
 
-      setTimeout(() => setStatus(""), 3000);
-    }, 1500);
+          setTimeout(() => setStatus(""), 3000);
+        },
+        (error) => {
+          console.log(error.text);
+          setStatus("");
+          toast.error(
+            "Sorry, I'm having trouble sending your message. Please try again later.",
+            {
+              position: "top-center",
+              autoClose: 6500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+            }
+          );
+        }
+      );
   };
 
   const contactInfo = [
@@ -46,8 +78,8 @@ const Contact = () => {
         </svg>
       ),
       title: "Email",
-      value: "hello@youssef.dev",
-      link: "mailto:hello@youssef.dev",
+      value: "youssefraafat848@gmail.com",
+      link: "mailto:youssefraafat848@gmail.com",
     },
 
     {
@@ -108,7 +140,7 @@ const Contact = () => {
         </div>
 
         <div className="contact-content">
-          <div className="contact-info">
+          <div className="contact-info-centered">
             <h3 className="contact-info-title">Let's Connect</h3>
             <p className="contact-info-text">
               I'm always interested in hearing about new projects and
@@ -142,6 +174,7 @@ const Contact = () => {
                   aria-label={social.name}
                   target="_blank"
                   rel="noopener noreferrer"
+                  style={{ animationDelay: `${0.2 + index * 0.1}s` }}
                 >
                   {social.icon}
                 </a>
@@ -149,14 +182,15 @@ const Contact = () => {
             </div>
           </div>
 
-          <form className="contact-form" onSubmit={handleSubmit}>
+          {/* <form ref={form} className="contact-form" onSubmit={handleSubmit}>
+            <ToastContainer />
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
                 type="text"
                 id="name"
-                name="name"
-                value={formData.name}
+                name="user_name"
+                value={formData.user_name}
                 onChange={handleChange}
                 required
                 placeholder="Your name"
@@ -168,8 +202,8 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="email"
-                value={formData.email}
+                name="user_email"
+                value={formData.user_email}
                 onChange={handleChange}
                 required
                 placeholder="your.email@example.com"
@@ -219,7 +253,7 @@ const Contact = () => {
                 Thanks for reaching out! I'll get back to you soon.
               </div>
             )}
-          </form>
+          </form> */}
         </div>
       </div>
 

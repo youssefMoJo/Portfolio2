@@ -1,46 +1,37 @@
-import './Experience.css';
+import "./Experience.css";
 
 const Experience = () => {
   const experiences = [
     {
-      company: 'Tech Innovations Inc.',
-      position: 'Senior Full Stack Developer',
-      period: '2023 - Present',
-      location: 'San Francisco, CA',
-      description: 'Leading development of scalable web applications using React, Node.js, and AWS. Mentoring junior developers and architecting microservices-based solutions.',
+      company: "St. John's Farmers Market",
+      position: "Events Manager",
+      period: "Feb. 2025 - Present",
+      location: "St. John's, NL, Canada",
+      description:
+        "Leading team operations and event coordination for a major community market. Designed and developed the organization's website to enhance online presence and streamline vendor processes.",
       achievements: [
-        'Architected and deployed a real-time analytics dashboard serving 100K+ users',
-        'Reduced API response time by 60% through optimization and caching strategies',
-        'Led migration from monolithic to microservices architecture'
+        "Designed and developed a responsive website (sjfm.ca) improving online presence and streamlining vendor registration",
+        "Led a team of 5 staff and coordinated logistics for large-scale community events",
+        "Improved operational efficiency and community engagement through strategic planning",
+        "Managed partnerships and promotions, strengthening collaboration between local businesses and the market brand",
       ],
-      color: '#6366f1'
+      color: "#6366f1",
     },
     {
-      company: 'Digital Solutions Co.',
-      position: 'Full Stack Developer',
-      period: '2021 - 2023',
-      location: 'Remote',
-      description: 'Developed and maintained multiple client-facing applications. Collaborated with cross-functional teams to deliver high-quality software solutions.',
+      company: "Community Sector Council",
+      position: "Technical Trainer and Support Specialist",
+      period: "Jan. 2024 - Apr. 2024",
+      location: "St. John's, NL, Canada",
+      description:
+        "Provided comprehensive technical training and support to community members. Developed and delivered workshops to improve digital literacy and technical skills across diverse audiences.",
       achievements: [
-        'Built 15+ responsive web applications using React and Vue.js',
-        'Implemented CI/CD pipelines reducing deployment time by 40%',
-        'Improved code quality through comprehensive testing and code reviews'
+        "Delivered 1-on-1 support to 20+ individuals, troubleshooting technical issues and ensuring high satisfaction",
+        "Led 15+ workshops for 100+ participants, simplifying complex technical concepts",
+        "Developed tailored training materials to meet individual and group needs",
+        "Fostered engagement and improved digital literacy across the community sector",
       ],
-      color: '#8b5cf6'
+      color: "#8b5cf6",
     },
-    {
-      company: 'StartUp Labs',
-      position: 'Frontend Developer',
-      period: '2020 - 2021',
-      location: 'New York, NY',
-      description: 'Focused on creating intuitive user interfaces and implementing modern frontend architectures. Worked closely with design team to bring mockups to life.',
-      achievements: [
-        'Designed and developed company website increasing conversion by 35%',
-        'Implemented state management solutions improving app performance',
-        'Created reusable component library used across multiple projects'
-      ],
-      color: '#ec4899'
-    }
   ];
 
   return (
@@ -60,7 +51,10 @@ const Experience = () => {
               className="timeline-item"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="timeline-marker" style={{ background: exp.color }}>
+              <div
+                className="timeline-marker"
+                style={{ background: exp.color }}
+              >
                 <div className="timeline-ring"></div>
               </div>
               <div className="timeline-content">
@@ -72,7 +66,9 @@ const Experience = () => {
                     </div>
                     <div className="experience-meta">
                       <span className="experience-period">{exp.period}</span>
-                      <span className="experience-location">📍 {exp.location}</span>
+                      <span className="experience-location">
+                        📍 {exp.location}
+                      </span>
                     </div>
                   </div>
                   <p className="experience-description">{exp.description}</p>
