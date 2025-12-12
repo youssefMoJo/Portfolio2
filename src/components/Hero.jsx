@@ -1,13 +1,18 @@
-import { useEffect, useState } from 'react';
-import './Hero.css';
+import { useEffect, useState } from "react";
+import "./Hero.css";
 
 const Hero = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles = ['Full Stack Developer', 'UI/UX Enthusiast', 'Problem Solver', 'Code Artist'];
+  const roles = [
+    "Full Stack Developer",
+    "AWS & Cloud Engineer",
+    "Backend Developer",
+    "Problem Solver",
+  ];
 
   useEffect(() => {
     const handleType = () => {
@@ -24,7 +29,7 @@ const Hero = () => {
 
       if (!isDeleting && text === fullText) {
         setTimeout(() => setIsDeleting(true), 2000);
-      } else if (isDeleting && text === '') {
+      } else if (isDeleting && text === "") {
         setIsDeleting(false);
         setLoopNum(loopNum + 1);
       }
@@ -35,11 +40,11 @@ const Hero = () => {
   }, [text, isDeleting, loopNum, typingSpeed, roles]);
 
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -61,8 +66,8 @@ const Hero = () => {
             <span className="cursor">|</span>
           </div>
           <p className="hero-description">
-            I craft exceptional digital experiences with clean code and creative design.
-            Passionate about building scalable applications that make a difference.
+            I build scalable, cloud-ready applications with clean code and
+            purposeful design.
           </p>
           <div className="hero-buttons">
             <button className="btn btn-primary" onClick={scrollToProjects}>
@@ -86,12 +91,11 @@ const Hero = () => {
             </div>
             <div className="code-content">
               <pre>
-{`const developer = {
+                {`const developer = {
   name: 'Youssef',
-  skills: ['React', 'Node.js', 'Python'],
-  passion: 'Building amazing things',
+  skills: ['MERN', 'AWS', 'Terraform'],
+  passion: 'Building simple, scalable, AI-powered products',
   available: true,
-  coffeeLevel: 'Maximum ☕'
 };
 
 export default developer;`}

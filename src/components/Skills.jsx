@@ -1,59 +1,48 @@
-import './Skills.css';
+import "./Skills.css";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Frontend',
-      icon: '🎨',
-      skills: [
-        { name: 'React', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Next.js', level: 85 },
-        { name: 'TailwindCSS', level: 92 },
-        { name: 'Vue.js', level: 80 },
-        { name: 'CSS/SASS', level: 88 }
-      ]
+      title: "Frontend",
+      icon: "🎨",
+      skills: ["React", "Redux", "JavaScript", "Tailwind", "HTML5", "CSS3"],
     },
     {
-      title: 'Backend',
-      icon: '⚙️',
-      skills: [
-        { name: 'Node.js', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'Express', level: 88 },
-        { name: 'PostgreSQL', level: 82 },
-        { name: 'MongoDB', level: 87 },
-        { name: 'Redis', level: 75 }
-      ]
+      title: "Backend",
+      icon: "⚙️",
+      skills: ["Node.js", "Express.js", "REST APIs", "MongoDB"],
     },
     {
-      title: 'DevOps & Tools',
-      icon: '🚀',
-      skills: [
-        { name: 'Git', level: 92 },
-        { name: 'Docker', level: 85 },
-        { name: 'AWS', level: 78 },
-        { name: 'CI/CD', level: 80 },
-        { name: 'Linux', level: 83 },
-        { name: 'Nginx', level: 75 }
-      ]
+      title: "Cloud & DevOps",
+      icon: "🚀",
+      skills: ["AWS", "Lambda", "API Gateway", "Terraform", "Git", "CI/CD"],
     },
     {
-      title: 'Design & Other',
-      icon: '✨',
+      title: "Data & AI",
+      icon: "🤖",
       skills: [
-        { name: 'Figma', level: 88 },
-        { name: 'UI/UX Design', level: 85 },
-        { name: 'GraphQL', level: 80 },
-        { name: 'REST APIs', level: 93 },
-        { name: 'WebSockets', level: 82 },
-        { name: 'Testing', level: 86 }
-      ]
-    }
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Machine Learning",
+        "Feature Engineering",
+      ],
+    },
+    {
+      title: "Tools",
+      icon: "🛠️",
+      skills: ["Postman", "Jira", "Docker"],
+    },
   ];
 
   return (
     <section id="skills" className="skills">
+      <div className="hero-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
+
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Skills & Expertise</h2>
@@ -75,22 +64,17 @@ const Skills = () => {
               </div>
               <div className="skills-list">
                 {category.skills.map((skill, skillIndex) => (
-                  <div
-                    key={skill.name}
-                    className="skill-item"
-                    style={{ animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s` }}
+                  <span
+                    key={skill}
+                    className="skill-tag"
+                    style={{
+                      animationDelay: `${
+                        categoryIndex * 0.1 + skillIndex * 0.05
+                      }s`,
+                    }}
                   >
-                    <div className="skill-info">
-                      <span className="skill-name">{skill.name}</span>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div
-                        className="skill-progress"
-                        style={{ width: `${skill.level}%` }}
-                      ></div>
-                    </div>
-                  </div>
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
@@ -100,18 +84,18 @@ const Skills = () => {
         <div className="skills-highlight">
           <div className="highlight-card">
             <div className="highlight-icon">💡</div>
-            <h4>Quick Learner</h4>
-            <p>Always exploring new technologies and staying updated with industry trends</p>
+            <h4>Always Learning</h4>
+            <p>Continuously exploring new tools and cloud services</p>
           </div>
           <div className="highlight-card">
             <div className="highlight-icon">🤝</div>
-            <h4>Team Player</h4>
-            <p>Experienced in collaborative development and agile methodologies</p>
+            <h4>Collaborative</h4>
+            <p>Experience working in fast-paced Agile teams</p>
           </div>
           <div className="highlight-card">
             <div className="highlight-icon">🎯</div>
-            <h4>Problem Solver</h4>
-            <p>Passionate about tackling complex challenges with elegant solutions</p>
+            <h4>Problem-Focused</h4>
+            <p>I enjoy solving real-world problems with simple solutions</p>
           </div>
         </div>
       </div>

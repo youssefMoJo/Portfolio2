@@ -75,6 +75,12 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
+      <div className="hero-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
+
       <div className="container">
         <div className="section-header">
           <h2 className="section-title">Featured Projects</h2>
