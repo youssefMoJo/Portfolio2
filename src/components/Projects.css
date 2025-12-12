@@ -275,6 +275,28 @@
   .project-content {
     padding: 1.25rem;
   }
+
+  /* Always show overlay on mobile */
+  .project-overlay {
+    opacity: 1;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+  }
+
+  .project-links {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .project-link {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .project-card:hover .project-overlay {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
 }
 
 @media (max-width: 640px) {
@@ -311,6 +333,17 @@
     width: 45px;
     height: 45px;
   }
+
+  .project-links {
+    bottom: 0.625rem;
+    right: 0.625rem;
+    gap: 0.75rem;
+  }
+
+  .project-link svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -340,7 +373,34 @@
   }
 
   .project-link {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .project-links {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    gap: 0.625rem;
+  }
+
+  .project-link svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-link {
+    width: 38px;
+    height: 38px;
+  }
+
+  .project-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .project-links {
+    gap: 0.5rem;
   }
 }
