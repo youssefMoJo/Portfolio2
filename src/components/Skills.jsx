@@ -89,8 +89,8 @@ const Skills = () => {
           </div>
           <div className="highlight-card">
             <div className="highlight-icon">🤝</div>
-            <h4>Collaborative</h4>
-            <p>Experience working in fast-paced Agile teams</p>
+            <h4>Strong Communicator</h4>
+            <p>Translating complex technical concepts for diverse audiences</p>
           </div>
           <div className="highlight-card">
             <div className="highlight-icon">🎯</div>
