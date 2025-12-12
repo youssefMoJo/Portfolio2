@@ -4,6 +4,7 @@ import myFlixImage from "../assets/My-Flix.png";
 import shortenUrlImage from "../assets/Shorten URL.png";
 import heartDiseaseImage from "../assets/Heart Disease Prediction.png";
 import ClipWise from "../assets/ClipWise.png";
+import sjfm from "../assets/SJFM.png";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -30,6 +31,17 @@ const Projects = () => {
     },
     {
       id: 2,
+      title: "St. John's Farmers Market Website",
+      description:
+        "Built a responsive website to improve the market's online presence and streamline vendor registration.",
+      image: sjfm,
+      tags: ["React", "Google Analytics"],
+      category: "fullstack",
+      github: "#",
+      demo: "https://sjfm.ca",
+    },
+    {
+      id: 3,
       title: "My-Flix",
       description:
         "A movie selection web app with intelligent recommendation engine. Users can search movies, manage personal lists, and receive AI-powered suggestions based on their selections. Migrated from MERN to AWS Amplify, cutting deployment costs by 90% ($300/year to $12–$24) while improving scalability.",
@@ -40,7 +52,7 @@ const Projects = () => {
       demo: "https://main.d3acsmjhy3g5jo.amplifyapp.com/",
     },
     {
-      id: 3,
+      id: 4,
       title: "Shorten URL",
       description:
         "A lightweight Chrome extension that shortens long URLs with one click, backed by a custom AWS architecture. Published to the Chrome Web Store with 20+ active users and 500+ shortened links.",
@@ -51,7 +63,7 @@ const Projects = () => {
       demo: "https://chromewebstore.google.com/detail/shorten-url/pkdhbhbeapnenbeihmabpgmeeinbdpgc",
     },
     {
-      id: 4,
+      id: 5,
       title: "Heart Disease Prediction",
       description:
         "Developed a machine learning model to predict heart disease with optimized preprocessing and feature engineering. Applied data scaling methods such as Min-Max, Robust, and Z-score to optimize model performance.",
@@ -111,24 +123,26 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} />
                 <div className="project-overlay">
                   <div className="project-links">
-                    <a
-                      href={project.github}
-                      className="project-link"
-                      aria-label="View code"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
+                    {project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        className="project-link"
+                        aria-label="View code"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                      </svg>
-                    </a>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                        >
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                      </a>
+                    )}
                     <a
                       href={project.demo}
                       className="project-link"
