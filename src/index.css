@@ -37,3 +37,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Global responsive improvements */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}

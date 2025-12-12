@@ -203,6 +203,16 @@
   font-weight: bold;
 }
 
+@media (max-width: 968px) {
+  .experience {
+    padding: 4rem 0;
+  }
+
+  .timeline {
+    max-width: 800px;
+  }
+}
+
 @media (max-width: 768px) {
   .experience {
     padding: 4rem 0;
@@ -247,5 +257,91 @@
 
   .experience-position {
     font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .experience {
+    padding: 3rem 0;
+  }
+
+  .timeline {
+    padding: 1.5rem 0;
+  }
+
+  .experience-card {
+    padding: 1.25rem;
+  }
+
+  .experience-position {
+    font-size: 1.15rem;
+  }
+
+  .experience-company {
+    font-size: 1rem;
+  }
+
+  .experience-description {
+    font-size: 0.95rem;
+  }
+
+  .experience-achievements li {
+    font-size: 0.9rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 2.5rem 0;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-marker {
+    left: 15px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-ring {
+    width: 35px;
+    height: 35px;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+    padding-left: 3rem;
+  }
+
+  .experience-card {
+    padding: 1rem;
+  }
+
+  .experience-position {
+    font-size: 1.1rem;
+  }
+
+  .experience-company {
+    font-size: 0.95rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .experience-achievements h5 {
+    font-size: 0.95rem;
+  }
+
+  .experience-achievements li {
+    font-size: 0.85rem;
+    padding-left: 1.25rem;
   }
 }
