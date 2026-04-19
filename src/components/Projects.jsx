@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Projects.css";
 import myFlixImage from "../assets/My-Flix.png";
-import shortenUrlImage from "../assets/Shorten URL.png";
+import shortenUrlImage from "../assets/Shorten URL1.png";
 import heartDiseaseImage from "../assets/Heart Disease Prediction.png";
 import ClipWise from "../assets/ClipWise.png";
 import sjfm from "../assets/SJFM.png";
@@ -27,7 +27,7 @@ const Projects = () => {
       ],
       category: "fullstack",
       github: "https://github.com/youssefMoJo/Clipwise",
-      demo: "#",
+      demo: "https://clipwise-cc40d.web.app",
     },
     {
       id: 2,
@@ -49,18 +49,29 @@ const Projects = () => {
       tags: ["React", "AWS Amplify", "JWT", "TMDB API", "ChatGPT API"],
       category: "fullstack",
       github: "https://github.com/MyFelx/App",
-      demo: "https://main.d3acsmjhy3g5jo.amplifyapp.com/",
+      demo: "https://main.d1pbor8ef5fg5y.amplifyapp.com/login",
     },
     {
       id: 4,
-      title: "Shorten URL",
+      title: "Short URL",
       description:
-        "A lightweight Chrome extension that shortens long URLs with one click, backed by a custom AWS architecture. Published to the Chrome Web Store with 20+ active users and 500+ shortened links.",
+        "Serverless URL shortening platform with React/TypeScript dashboard, authentication, and Chrome extension. Built with Terraform IaC, featuring secure short codes (48-bit entropy), automated deployment, and CloudFront CDN on custom domain.",
       image: shortenUrlImage,
-      tags: ["JavaScript", "AWS Lambda", "API Gateway", "DynamoDB"],
+      tags: [
+        "React",
+        "TypeScript",
+        "AWS Lambda",
+        "API Gateway",
+        "DynamoDB",
+        "Cognito",
+        "Terraform",
+        "CloudFront",
+        "S3",
+        "Route 53",
+      ],
       category: "fullstack",
       github: "https://github.com/youssefMoJo/Shorten-URL",
-      demo: "https://chromewebstore.google.com/detail/shorten-url/pkdhbhbeapnenbeihmabpgmeeinbdpgc",
+      demo: "https://www.shorturl.life/",
     },
     {
       id: 5,
